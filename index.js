@@ -12,12 +12,11 @@ audio.play();//to play audio
 function transformFunc(e){
     if(e.propertyName !== 'transform') return;
     e.target.classList.remove('playing');
-}
-
+}//to remove the tranform property after playing 
 const keys= document.querySelectorAll('.key');
 keys.forEach(element => {
     element.addEventListener('transitionend',transformFunc);
-});
+});//adding trasitionend event listener to keys that will  be transitioned or trasfromed to be precise in this project
 window.addEventListener('keydown',playSound);
 
 
